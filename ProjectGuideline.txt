@@ -1,0 +1,56 @@
+---------------------------------------- Demonstration of a Mini-Project on Core WebApi ------------------------------------------
+* EmployeeSync :
+
+EmployeeSync is a RESTful Web API project built using ASP.NET Core for managing Employee records. 
+This project demonstrates best practices in .NET development including the use of DTOs, layered architecture,
+and Entity Framework Core.
+
+* Features :
+
+- CRUD operations for Employee entities
+- Uses DTOs to separate API models from database models
+- Exception handling and validation
+- Code structure based on SOLID principles and clean architecture
+
+* Technologies Used :
+
+- ASP.NET Core 8.0
+- Entity Framework Core
+- SQL Server
+- C#
+- Swagger (for API testing)
+
+* Folder Structure :
+
+```
+EmployeeSync/
+│
+├── Controllers/            # API Controllers
+├── DTO/                   # Data Transfer Objects
+├── Interfaces/            # Repository Interfaces
+├── Data/                  # DbContext and Repository Implementations
+├── Migrations/            # EF Core migration files
+├── Program.cs             # Main entry point
+├── appsettings.json       # Configuration settings
+├── EmployeeSync.sln       # Solution file
+└── ProjectGuideline.txt   # Notes or guidelines
+```
+
+* How to Run :
+
+1. **Clone the repository or unzip the project**
+2. **Open `EmployeeSync.sln` in Visual Studio 2022+**
+3. **Restore NuGet packages**
+4. **Update connection string in `appsettings.json`** to point to your SQL Server
+5. **Run EF Core migrations** (if not already applied):
+6. ** Applying here a Code First Approach
+   ```
+   dotnet ef database update
+   ```
+7. **Run the project (F5 or dotnet run)**
+8. **Open Swagger at:** `https://localhost:{port}/swagger`
+
+* Notes :
+
+- Ensure SQL Server is running.
+- Swagger UI is enabled by default for easy API testing.
